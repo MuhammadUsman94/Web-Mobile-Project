@@ -1,0 +1,86 @@
+<!--
+<div class="navbar-container">
+  <img src="/assets/logo.png" class="logo" (click)="goToHome()">
+  <div class="user-profile"  [matMenuTriggerFor]="menu" *ngIf="userName">
+      <p class="greetings">Hello, {{userName}}</p>
+      <ngx-avatar name="{{userName}}" textSizeRatio="2.5" bgColor="#f5f5f5" fgColor="#9c27b0"></ngx-avatar>
+      <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="logoutUser()"><mat-icon>logout</mat-icon>Logout</button>
+        </mat-menu>
+  </div>
+</div>
+-->
+
+<!--
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <img src="/assets/image1.JPG" class="logo" (click)="goToHome()" width="60" height="60" alt="logo">
+    <h1>.......</h1>
+    
+    
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href=""><span style="color:rgb(14, 221, 204); "></span> </a> <br>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><span style="color:rgb(14, 221, 204); "> <b>About Us</b></span> </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#"><span style="color: rgb(14, 221, 204);"> <b>Contact Us</b></span></a>
+        </li>
+      </ul>
+      <span class="span_type">
+       <button (click)="logoutUser()"><mat-icon>logout</mat-icon></button>
+      </span>
+    </div>
+  </div>
+</nav>
+
+
+-->
+
+
+
+<nav class="navbar">
+  <div class="logo"><img src="/assets/image3.JPG" alt="LOGO" width="60" height="45"></div>
+  <div class="push-left">
+    <button id="menu-toggler" data-class="menu-active" class="hamburger">
+      <span class="hamburger-line hamburger-line-top"></span>
+      <span class="hamburger-line hamburger-line-middle"></span>
+      <span class="hamburger-line hamburger-line-bottom"></span>
+    </button>
+
+    <!--  Menu compatible with wp_nav_menu  -->
+    <ul id="primary-menu" class="menu nav-menu">
+      <li class="menu-item current-menu-item"><a class="nav__link"  (click)="goToHome()">Home</a></li>
+      <li class="menu-item dropdown">
+        <a class="nav__link"  (click)="About()">About</a>
+
+      </li>
+      <li class="menu-item dropdown">
+        <a class="nav__link"  (click)="contact()">Contact</a>
+      </li>
+
+      <li class="menu-item ">
+        <a class="nav__link" (click)="logoutUser()">LOGOUT</a>
+      </li>
+    </ul>
+
+
+  </div>
+</nav>
+<script>
+  $(document).ready(function() {
+  // Toggle menu on click
+  $("#menu-toggler").click(function() {
+    toggleBodyClass("menu-active");
+  });
+
+  function toggleBodyClass(className) {
+    document.body.classList.toggle(className);
+  }
+
+ });
+</script>

@@ -1,0 +1,30 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title  title="{{hotelName}}">{{hotelName}}</mat-card-title>
+    <mat-card-subtitle  title="{{cuisines}}">{{cuisines}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image width="100" height="100" src="{{hotelThumbnail}}" alt="Hotel {{hotelName}}">
+  <mat-card-content>
+    <p> <span class="rating-star">{{'★'.repeat(math.round(rating))}}</span></p>
+    <p>Reviews: {{review}}</p>
+  </mat-card-content>
+</mat-card>
+
+<!--
+<mat-card-actions>
+  <button mat-raised-button color="warn" style="text-align: center;">Order Now</button>
+</mat-card-actions>
+
+
+<mat-card class="example-card">
+  <mat-card-title-group>
+    <mat-card-title title="{{hotelName}}">{{hotelName}}</mat-card-title>
+    <mat-card-subtitle title="{{cuisines}}" >{{cuisines}}</mat-card-subtitle>
+    <img mat-card-lg-image  width="100" height="100" src="{{hotelThumbnail}}" alt="Hotel {{hotelName}}" >
+  </mat-card-title-group>
+  <mat-card-content>
+    <p> <span class="rating-star">{{'★'.repeat(math.round(rating))}}</span></p>
+    <p>Reviews: {{review}}</p>
+  </mat-card-content>
+</mat-card>
+-->
